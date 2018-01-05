@@ -1,0 +1,89 @@
+# Flag: flag-descriptive-name-with-hyphens
+# Severity: normal # major, normal, minor, wishlist
+# Certainty: certain # certain, probable, possible, guess
+# Info: >-
+#   Long description which can continue
+#   over multiple lines.
+# Ref: https://example.com # URL to reference/proof/justification
+# Help: https://musescore.org/en/handbook/ # URL to solution
+# --- # Flag separator
+flag: arco-or-pizz-text-lacks-channel-change
+severity: major
+certainty: certain
+info: >-
+  Arco and pizzicato (pizz.) text markings should affect playback.
+affected-strings:
+  - arco
+  - pizz.
+  - pizzicato
+ref: https://musescore.com/shoogle/scores/3434266
+help: https://musescore.org/en/handbook-sound-and-playback/mixer#mid-staff-change
+---
+flag: automatic-line-break
+severity: normal
+certainty: probable
+info: >-
+  OpenScore transcriptions should have manual line breaks added to match the
+  original score. There should be no automatic line breaks.
+
+  This rule may not apply if the original score uses a paper size that is
+  very different to A4 / US Letter.
+ref: https://musescore.com/shoogle/scores/3434266
+help: https://musescore.org/en/handbook/breaks-and-spacers
+---
+flag: automatic-page-break
+severity: normal
+certainty: possible
+info: >-
+  OpenScore transcriptions should have manual page breaks added to match the
+  original score. There should be no automatic page breaks, and no page breaks
+  that occur at a manual line break.
+
+  This rule may not apply if any of the following are true:
+
+  1. The original score uses a paper size that is very different to A4 /
+     US Letter.
+
+  2. The transcription has many more staves than the original.
+
+  3. The stave space size is smaller than 1mm, making the music difficult to
+     read, and relaxing the rule allows a larger stave space size to be used.
+ref: https://musescore.com/shoogle/scores/3434266
+help: https://musescore.org/en/handbook/breaks-and-spacers
+---
+flag: entire-text-element-has-manual-formatting
+severity: normal
+certainty: certain
+info: >-
+  Don't manually format text (e.g. as bold or italic) if you can use a text
+  style such as "Technique" instead. You can create a new style if none of the
+  existing ones are suitable. Manual formatting is only acceptable when
+  different formatting is needed for different words or characters within a
+  single text element.
+ref: https://musescore.com/shoogle/scores/3434266
+help: https://musescore.org/en/handbook/text-styles-and-properties
+---
+flag: technique-text-lacks-technique-style
+severity: major
+certainty: certain
+info: >-
+  Expressive instructions should use the "Technique" text style. Do not
+  format text (e.g. as italic) if you can use a text style intead.
+affected-strings:
+  - con afflizione
+  - con agevolezza
+  - dolce
+ref: https://musescore.com/shoogle/scores/3434266
+help: https://musescore.org/en/handbook/text-styles-and-properties
+---
+flag: technical-instruction-has-formatting-or-style
+severity: major
+certainty: certain
+info: >-
+  Technical instructions should be plain staff text.
+affected-strings:
+  - arco
+  - pizz.
+  - pizzicato
+ref: https://musescore.com/shoogle/scores/3434266
+help: https://musescore.org/en/handbook/text-styles-and-properties
