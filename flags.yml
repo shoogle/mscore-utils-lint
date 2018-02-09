@@ -63,6 +63,18 @@ info: >-
 ref: https://musescore.com/shoogle/scores/3434266
 help: https://musescore.org/en/handbook/text-styles-and-properties
 ---
+flag: technical-instruction-has-formatting-or-style
+severity: major
+certainty: certain
+info: >-
+  Technical instructions should be plain staff text.
+affected-strings:
+  - arco
+  - pizz.
+  - pizzicato
+ref: https://musescore.com/shoogle/scores/3434266
+help: https://musescore.org/en/handbook/text-styles-and-properties
+---
 flag: technique-text-lacks-technique-style
 severity: major
 certainty: certain
@@ -73,17 +85,5 @@ affected-strings:
   - con afflizione
   - con agevolezza
   - dolce
-ref: https://musescore.com/shoogle/scores/3434266
-help: https://musescore.org/en/handbook/text-styles-and-properties
----
-flag: technical-instruction-has-formatting-or-style
-severity: major
-certainty: certain
-info: >-
-  Technical instructions should be plain staff text.
-affected-strings:
-  - arco
-  - pizz.
-  - pizzicato
 ref: https://musescore.com/shoogle/scores/3434266
 help: https://musescore.org/en/handbook/text-styles-and-properties
